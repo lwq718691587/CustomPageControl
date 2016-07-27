@@ -74,7 +74,6 @@
 
 - (void)getX:(CGFloat )x
 {
-    NSLog(@"%f",x);
     if (x == 0) {
         return;
     }
@@ -98,7 +97,7 @@
     CAKeyframeAnimation * ovalPathAnim = [CAKeyframeAnimation animationWithKeyPath:@"path"];
     ovalPathAnim.values                = @[(__bridge id)path1,(__bridge id)path2];
     ovalPathAnim.keyTimes              = @[@0, @1];
-    ovalPathAnim.duration              = 0.1;
+    ovalPathAnim.duration              = 0.11;
     ovalPathAnim.fillMode=kCAFillModeForwards;
     ovalPathAnim.removedOnCompletion = YES;
     [self.shapeLayer addAnimation:ovalPathAnim forKey:@"ovalUntitled1Anim"];
@@ -170,8 +169,6 @@
         pointO = CGPointMake(pointA.x + d / 2 * sinθ , pointA.y + d / 2 * cosθ + 1);
         pointP =  CGPointMake(pointB.x + d / 2 * sinθ , pointB.y + d / 2 * cosθ - 1);
     }
-    
-   
     
     UIBezierPath *path = [UIBezierPath bezierPath];
     // D
